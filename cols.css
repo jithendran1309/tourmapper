@@ -1,0 +1,48 @@
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #df3f44;
+    clear: left;
+    text-align: center;
+	height:50px;
+}
+footer {
+    padding: 1em;
+    color: white;
+    background-color: #df3f44;
+    clear: left;
+    text-align: center;
+	height:10px;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+#map {
+        height: 400px;
+        width: 100%;
+       }
+	   
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 870px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
