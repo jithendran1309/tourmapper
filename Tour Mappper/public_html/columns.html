@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+    <!--jQuery library--> 
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+    <!--Latest compiled and minified JavaScript--> 
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tour mapper</title>
+<link rel="stylesheet" href="cols.css" type="text/css">
+
+
+<script type="text/javascript">
+					var a;
+					function changeselected()
+					{
+						var selectBox = document.getElementById("crit");
+						
+						var a = selectBox.options[selectBox.selectedIndex].value;
+						//alert(a);
+                                                if(a==="Museums")
+                                                {
+                                                    document.getElementById("ta").innerHTML="Museum1 Museum2 Museum 3";
+                                                }
+   						if(a === "Temples")
+						{
+                                                        document.getElementById("ta").innerHTML="Temple1 Temple2 Temple3";
+						}
+                                                if(a === "Theatres")
+                                                {
+                                                    document.getElementById("ta").innerHTML="Theatre1 Theatre2 Theatre 3";
+                                                }
+                                                if(a ==="Malls")
+                                                {
+                                                    document.getElementById("ta").innerHTML="Mall1 Mall2 Mall3";
+                                                }
+                                                if(a ==="Beaches")
+                                                {
+                                                    document.getElementById("ta").innerHTML="Beach1 Beach2 Beach3";
+                                                }
+					}
+				</script>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h2>Project Map</h2>
+</header>
+  
+<nav>
+ <div id="map">
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWM8_dMZnrM3j2F7PKOmfwZx0ljyxV2Cg&callback=initMap">
+    </script>
+</div>
+</nav>
+
+<article>
+   <form>
+        <div class="form-group">
+				<label for="crit">User Criteria</label>
+				<br><br>
+                  <select class="form-control" name="criteria"  id="crit" onchange="changeselected()">
+				  <option>Museums</option>
+				  <option>Theatres</option>
+				  <option>Malls</option>
+				  <option>Beaches</option>
+				  <option>Temples</option>
+				  </select>
+        </div>
+              <div class="form-group">
+			  <br><br>
+				Selected place:
+				<br><br>
+                                <div id="ta"> </div>
+                                 
+              </div><br><br>
+       <div class="form-group">
+           <input type="text" placeholder="Enter your desired location" >
+       </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+</article>
+
+<footer>Copyright &copy; Project</footer>
+
+</div>
+
+</body>
+</html>
