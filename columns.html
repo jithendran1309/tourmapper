@@ -16,11 +16,10 @@
 						var selectBox = document.getElementById("crit");
 						var ta1=document.getElementById("ta");
 						var a = selectBox.options[selectBox.selectedIndex].value;
-						alert(a);
    						if(a=="Temples")
 						{
 							document.getElementById("ta").innerHTML = "Museum1";
-							document.getElementById("ta").innertext = "Museum2";
+							document.getElementById("ta").innerHTML = "Museum2";
 						}
 					}
 				</script>
@@ -59,7 +58,7 @@
         <div class="form-group">
 				<label for="crit">User Criteria</label>
 				<br><br>
-                  <select class="form-control" name="criteria" placeholder="Criteria" id="crit" onchange="changeselected()">
+        <select class="form-control" name="criteria" placeholder="Criteria" id="crit" onchange="changeselected()">
 				  <option>Museums</option>
 				  <option>Theatres</option>
 				  <option>Malls</option>
@@ -73,7 +72,6 @@
 					Selected Place
 				</label>
 				<br><br>
-				<input type="textarea" id="ta"/>
               </div>
               <div class="form-group">
                   <input type="password" class="form-control" name="pwd" placeholder="Password">
