@@ -3,39 +3,47 @@ div.container {
     border: 1px solid gray;
 }
 
-header, footer {
+header {
     padding: 1em;
     color: white;
-    background-color: #df3f44;
+    background-color: #67d136;
     clear: left;
     text-align: center;
-	height:100px;
+    height:100px;
 }
 footer {
     padding: 1em;
     color: white;
-    background-color: #df3f44;
+    position:absolute;
+    background-color: #67d136;
     clear: left;
+    bottom:0;
     text-align: center;
-	height:50px;
+    height:50px;
+    width: 100%;
 }
 
 nav {
     float: left;
     max-width: 160px;
-    margin: 0;
-    padding: 1em;
+    border-bottom: 0;
+    max-height: 100%;
+    padding: auto;
+    overflow: hidden;
 }
 #map {
-        height: 400px;
-        width: 100%;
-       }
-	   
+    top:15%;
+    height: 45%;
+    width: 60%;
+    left: 2%;
+    position:absolute;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
 }
-   
+
 nav ul a {
     text-decoration: none;
 }
@@ -44,5 +52,6 @@ article {
     margin-left: 870px;
     border-left: 1px solid gray;
     padding: 1em;
+    margin-bottom: 0px;
     overflow: hidden;
 }
