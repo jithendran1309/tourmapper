@@ -1,105 +1,125 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
-    <!--jQuery library--> 
-    <script src="bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
-    <!--Latest compiled and minified JavaScript--> 
-    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tour mapper</title>
-<link rel="stylesheet" href="cols.css" type="text/css">
+    <head>
+        <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+        <!--jQuery library--> 
+        <script src="bootstrap/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+        <!--Latest compiled and minified JavaScript--> 
+        <script src="bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tour Mapper</title>
+        <link rel="stylesheet" href="cols.css" type="text/css">
+        <script type="text/javascript">
+            function changeselected()
+            {
+                var selectBox = document.getElementById("crit");
 
+                var a = selectBox.options[selectBox.selectedIndex].value;
+                //alert(a);
+                if (a === "Museums")
+                {
+                    document.getElementById("museum").style.visibility=visible;
+                    //document.getElementById("ta").innerHTML = "Museum1 <br> Museum2 <br> Museum3";
+                }
+                if (a === "Temples")
+                {
+                    document.getElementById("temple").style.visibility=visible;
+                    //document.getElementById("ta").innerHTML = "Temple1 <br> Temple2 <br> Temple3";
+                }
+                if (a === "Theatres")
+                {
+                    document.getElementById("theatre").style.visibility=visible;
+                    //document.getElementById("ta").innerHTML = "Theatre1 <br> Theatre2 <br> Theatre3";
+                }
+                if (a === "Malls")
+                {
+                    document.getElementById("mall").style.visibility=visible;
+                    //document.getElementById("ta").innerHTML = "Mall1 <br> Mall2 <br> Mall3";
+                }
+                if (a === "Beaches")
+                {
+                    document.getElementById("beach").style.visibility=visible;
+                    //document.getElementById("ta").innerHTML = "Beach1 <br> Beach2 <br> Beach3";
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            function retrieveinfo() {
+                var tex = document.getElementById("place").value;
+                if (tex === "Museum1")
+                {
+                    document.getElementById("content").innerHTML = "Museum1 is located near the station."
+                }
+                if (tex === "Temple3")
+                {
+                    document.getElementById("content").innerHTML = "Temple3 is located near the station."
+                }
 
-<script type="text/javascript">
-					function changeselected()
-					{
-						var selectBox = document.getElementById("crit");
-						
-						var a = selectBox.options[selectBox.selectedIndex].value;
-						//alert(a);
-                                                if(a==="Museums")
-                                                {
-                                                    document.getElementById("ta").innerHTML="Museum1 Museum2 Museum 3";
-                                                }
-   						if(a === "Temples")
-						{
-                                                        document.getElementById("ta").innerHTML="Temple1 Temple2 Temple3";
-						}
-                                                if(a === "Theatres")
-                                                {
-                                                    document.getElementById("ta").innerHTML="Theatre1 Theatre2 Theatre 3";
-                                                }
-                                                if(a ==="Malls")
-                                                {
-                                                    document.getElementById("ta").innerHTML="Mall1 Mall2 Mall3";
-                                                }
-                                                if(a ==="Beaches")
-                                                {
-                                                    document.getElementById("ta").innerHTML="Beach1 Beach2 Beach3";
-                                                }
-					}
-                                        </script>
-                                        <script type="text/javascript">
-                                        function retrieveinfo(){
-                                            var tex=document.getElementById("place").value;
-                                            if(tex==="Museum1")
-                                            {
-                                                document.getElementById("content").innerHTML="Museum1 is located near the station."
-                                            }
-                                            if(tex==="Temple3")
-                                            {
-                                                document.getElementById("content").innerHTML="Temple3 is located near the station."
-                                            }
-                                            
-                                        }
-				</script>
-</head>
-<body>
+            }
+        </script>
+    </head>
+    <body>
 
-<div class="container">
+        <div class="container">
 
-<header>
-   <h2>Project Map</h2>
-</header>
-  
-
-<article>
-   <form>
-        <div class="form-group">
-				<label for="crit">User Criteria</label>
-				<br><br>
-                  <select class="form-control" name="criteria"  id="crit" onchange="changeselected()">
-				  <option>Museums</option>
-				  <option>Theatres</option>
-				  <option>Malls</option>
-				  <option>Beaches</option>
-				  <option>Temples</option>
-				  </select>
-        </div>
-              <div class="form-group">
-			  <br><br>
-                          <h4>List of places:</h4>
-				<br>
-                                <div id="ta"> </div>
-                                 
-              </div><br><br>
-       <div class="form-group">
-           <input type="text" id="place" placeholder="Enter your desired location" >
-       </div>
-              <button type="submit" class="btn btn-primary" onclick="retrieveinfo()">Submit</button>
-            </form>
-</article>
-    <nav>
+            <header>
+                <h2>Project Map</h2>
+            </header>
+            <article>
+                <form>
+                    <div class="form-group">
+                        <label for="crit"><h4>User Criteria</h4></label>
+                        <br>
+                        <select class="form-control" name="criteria"  id="crit" onchange="changeselected()">
+                            <option>Museums</option>
+                            <option>Theatres</option>
+                            <option>Malls</option>
+                            <option>Beaches</option>
+                            <option>Temples</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <h4>List of places:</h4>
+                        <div id="list">
+                            <div id="museum">
+                                <input type=radio id="mus1">Museum 1
+                                <input type=radio id="mus2">Museum 2
+                                <input type=radio id="mus3">Museum 3
+                            </div>
+                            <div id="theatre">
+                                <input type=radio id="mus1">Theatre 1
+                                <input type=radio id="mus2">Theatre 2
+                                <input type=radio id="mus3">Theatre 3
+                            </div>
+                            <div id="mall">
+                                <input type=radio id="mus1">Mall 1
+                                <input type=radio id="mus2">Mall 2
+                                <input type=radio id="mus3">Mall 3
+                            </div>
+                            <div id="beach">
+                                <input type=radio id="mus1">Beach 1
+                                <input type=radio id="mus2">Beach 2
+                                <input type=radio id="mus3">Beach 3
+                            </div>
+                            <div id="temple">
+                                <input type=radio id="mus1">Temple 1
+                                <input type=radio id="mus2">Temple 2
+                                <input type=radio id="mus3">Temple 3
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="text" id="place" placeholder="Enter your desired location" >
+                    </div>
+                    <br><br>
+                    <button type="submit" class="btn btn-primary" onclick="retrieveinfo()">Submit</button>
+                </form>
+            </article>
+            <nav>
                 <div id="map"></div>
                 <script>
-                    
+
                     function initMap() {
                         var uluru = {lat: 10.729327, lng: 79.019563};
                         var map = new google.maps.Map(document.getElementById('map'), {
@@ -113,17 +133,13 @@ and open the template in the editor.
                         });
                     }
                 </script>
-                <script defer
+                <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASEWeplcnZ4LAVpKHeVuOmw2li6unKAso&callback=initMap">
                 </script>
-                <div id="content"> </div>
-                
             </nav>
+            <footer>Copyright &copy; Project</footer>
 
+        </div>
 
-<footer>Copyright &copy; Project</footer>
-
-</div>
-
-</body>
+    </body>
 </html>
