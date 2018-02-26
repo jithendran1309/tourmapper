@@ -38,6 +38,21 @@ nav {
     left: 2%;
     position:absolute;
 }
+#museum{
+    visibility: hidden;
+}
+#theatre{
+    visibility: hidden;
+}
+#mall{
+    visibility: hidden;
+}
+#beach{
+    visibility: hidden;
+}
+#temple{
+    visibility: hidden;
+}
 
 nav ul {
     list-style-type: none;
