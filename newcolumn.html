@@ -13,36 +13,50 @@
             function changeselected()
             {
                 var selectBox = document.getElementById("crit");
-
                 var a = selectBox.options[selectBox.selectedIndex].value;
-                //alert(a);
                 if (a === "Museums")
                 {
-                    document.getElementById("museum").style.visibility=visible;
-                    //document.getElementById("ta").innerHTML = "Museum1 <br> Museum2 <br> Museum3";
+                    document.getElementById("museum").style.display = 'block';
+                    document.getElementById("temple").style.display = 'none';
+                    document.getElementById("theatre").style.display = 'none';
+                    document.getElementById("mall").style.display = 'none';
+                    document.getElementById("beach").style.display = 'none';
                 }
                 if (a === "Temples")
                 {
-                    document.getElementById("temple").style.visibility=visible;
-                    //document.getElementById("ta").innerHTML = "Temple1 <br> Temple2 <br> Temple3";
+                    document.getElementById("museum").style.display = 'none';
+                    document.getElementById("theatre").style.display = 'none';
+                    document.getElementById("mall").style.display = 'none';
+                    document.getElementById("beach").style.display = 'none';
+                    document.getElementById("temple").style.display = 'block';
                 }
                 if (a === "Theatres")
                 {
-                    document.getElementById("theatre").style.visibility=visible;
-                    //document.getElementById("ta").innerHTML = "Theatre1 <br> Theatre2 <br> Theatre3";
+                    document.getElementById("museum").style.display = 'none';
+                    document.getElementById("temple").style.display = 'none';
+                    document.getElementById("mall").style.display = 'none';
+                    document.getElementById("beach").style.display = 'none';
+                    document.getElementById("theatre").style.display = 'block';
                 }
                 if (a === "Malls")
                 {
-                    document.getElementById("mall").style.visibility=visible;
-                    //document.getElementById("ta").innerHTML = "Mall1 <br> Mall2 <br> Mall3";
+                    document.getElementById("museum").style.display = 'none';
+                    document.getElementById("temple").style.display = 'none';
+                    document.getElementById("theatre").style.display = 'none';
+                    document.getElementById("beach").style.display = 'none';
+                    document.getElementById("mall").style.display = 'block';
                 }
                 if (a === "Beaches")
                 {
-                    document.getElementById("beach").style.visibility=visible;
-                    //document.getElementById("ta").innerHTML = "Beach1 <br> Beach2 <br> Beach3";
+                    document.getElementById("museum").style.display = 'none';
+                    document.getElementById("temple").style.display = 'none';
+                    document.getElementById("theatre").style.display = 'none';
+                    document.getElementById("mall").style.display = 'none';
+                    document.getElementById("beach").style.display = 'block';
                 }
             }
         </script>
+        <!--
         <script type="text/javascript">
             function retrieveinfo() {
                 var tex = document.getElementById("place").value;
@@ -57,6 +71,7 @@
 
             }
         </script>
+        -->
     </head>
     <body>
 
@@ -78,41 +93,49 @@
                             <option>Temples</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <br>
+                    <br>
+                    <div class="form-group" id="form">
                         <h4>List of places:</h4>
                         <div id="list">
                             <div id="museum">
-                                <input type=radio id="mus1">Museum 1
-                                <input type=radio id="mus2">Museum 2
-                                <input type=radio id="mus3">Museum 3
+                                <input type=radio id="mus1" name="museum">Museum 1
+                                <br>
+                                <input type=radio id="mus2" name="museum">Museum 2
+                                <br>
+                                <input type=radio id="mus3" name="museum">Museum 3
                             </div>
                             <div id="theatre">
-                                <input type=radio id="mus1">Theatre 1
-                                <input type=radio id="mus2">Theatre 2
-                                <input type=radio id="mus3">Theatre 3
+                                <input type=radio id="th1" name="theatre">Theatre 1
+                                <br>
+                                <input type=radio id="th2" name="theatre">Theatre 2
+                                <br>
+                                <input type=radio id="th3" name="theatre">Theatre 3
                             </div>
                             <div id="mall">
-                                <input type=radio id="mus1">Mall 1
-                                <input type=radio id="mus2">Mall 2
-                                <input type=radio id="mus3">Mall 3
+                                <input type=radio id="ml1" name="mall">Mall 1
+                                <br>
+                                <input type=radio id="ml2" name="mall">Mall 2
+                                <br>
+                                <input type=radio id="ml3" name="mall">Mall 3
                             </div>
                             <div id="beach">
-                                <input type=radio id="mus1">Beach 1
-                                <input type=radio id="mus2">Beach 2
-                                <input type=radio id="mus3">Beach 3
+                                <input type=radio id="be1" name="beach">Beach 1
+                                <br>
+                                <input type=radio id="be2" name="beach">Beach 2
+                                <br>
+                                <input type=radio id="be3" name="beach">Beach 3
                             </div>
                             <div id="temple">
-                                <input type=radio id="mus1">Temple 1
-                                <input type=radio id="mus2">Temple 2
-                                <input type=radio id="mus3">Temple 3
+                                <input type=radio id="tmp1" name="temple">Temple 1
+                                <br>
+                                <input type=radio id="tmp2" name="temple">Temple 2
+                                <br>
+                                <input type=radio id="tmp3" name="temple">Temple 3
                             </div>
                         </div>
-                    </div><br>
-                    <div class="form-group">
-                        <input type="text" id="place" placeholder="Enter your desired location" >
                     </div>
-                    <br><br>
+                    <br>
+                    <br>
                     <button type="submit" class="btn btn-primary" onclick="retrieveinfo()">Submit</button>
                 </form>
             </article>

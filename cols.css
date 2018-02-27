@@ -39,21 +39,20 @@ nav {
     position:absolute;
 }
 #museum{
-    visibility: hidden;
+    display: none;
 }
 #theatre{
-    visibility: hidden;
+    display: none;
 }
 #mall{
-    visibility: hidden;
+    display: none;
 }
 #beach{
-    visibility: hidden;
+    display: none;
 }
 #temple{
-    visibility: hidden;
+    display: none;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
