@@ -56,6 +56,26 @@
                 }
             }
         </script>
+        <script type="text/javascript">
+            function radioselected()
+            {
+                var a = document.getElementById("mus1").value;
+                var b = document.getElementById("mus2").value;
+                var c = document.getElementById("mus3").value;
+                var d = document.getElementById("th1").value;
+                var e = document.getElementById("th2").value;
+                var f = document.getElementById("th3").value;
+                var g = document.getElementById("be1").value;
+                var h = document.getElementById("be2").value;
+                var i = document.getElementById("be3").value;
+                var j = document.getElementById("tmp1").value;
+                var k = document.getElementById("tmp2").value;
+                var l = document.getElementById("tmp3").value;
+                var m = document.getElementById("ml1").value;
+                var n = document.getElementById("ml2").value;
+                var o = document.getElementById("ml3").value;
+            }
+        </script>
         <!--
         <script type="text/javascript">
             function retrieveinfo() {
@@ -97,7 +117,7 @@
                     <div class="form-group" id="form">
                         <h4>List of places:</h4>
                         <div id="list">
-                            <div id="museum">
+                            <div id="museum" onchange="radioselected()">
                                 <input type=radio id="mus1" name="museum">Museum 1
                                 <br>
                                 <input type=radio id="mus2" name="museum">Museum 2
