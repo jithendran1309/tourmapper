@@ -57,23 +57,105 @@
             }
         </script>
         <script type="text/javascript">
-            function radioselected()
+            var uluru;
+            function radioselected(placeCode, itemCode)
             {
-                var a = document.getElementById("mus1").value;
-                var b = document.getElementById("mus2").value;
-                var c = document.getElementById("mus3").value;
-                var d = document.getElementById("th1").value;
-                var e = document.getElementById("th2").value;
-                var f = document.getElementById("th3").value;
-                var g = document.getElementById("be1").value;
-                var h = document.getElementById("be2").value;
-                var i = document.getElementById("be3").value;
-                var j = document.getElementById("tmp1").value;
-                var k = document.getElementById("tmp2").value;
-                var l = document.getElementById("tmp3").value;
-                var m = document.getElementById("ml1").value;
-                var n = document.getElementById("ml2").value;
-                var o = document.getElementById("ml3").value;
+                switch (placeCode) {
+                    case 1:
+                        switch (itemCode)
+                        {
+                            case 1:
+                                uluru = {lat: 27.175216, lng: 78.042102};
+                                break;
+                            case 2:
+                                uluru = {lat: 13.05, lng: 79.43};
+                                break;
+                            case 3:
+                                uluru = {lat: 11.00, lng: 77.00};
+                                break;
+                            default:
+                                alert("Error");
+                        }
+                        break;
+                    case 2:
+                        switch (itemCode)
+                        {
+                            case 1:
+                                uluru = {lat: 11.24, lng: 79.44};
+                                break;
+                            case 2:
+                                uluru = {lat: 11.43, lng: 73.49};
+                                break;
+                            case 3:
+                                uluru = {lat: 9.10, lng: 79.28};
+                                break;
+                            default:
+                                alert("Error");
+                        }
+                        break;
+                    case 3:
+                        switch (itemCode)
+                        {
+                            case 1:
+                                uluru = {lat: 12.55, lng: 79.11};
+                                break;
+                            case 2:
+                                uluru = {lat: 11.24, lng: 76.44};
+                                break;
+                            case 3:
+                                uluru = {lat: 10.50, lng: 78.46};
+                                break;
+                            default:
+                                alert("Error");
+                        }
+                        break;
+                    case 4:
+                        switch (itemCode)
+                        {
+                            case 1:
+                                uluru = {lat: 11.24, lng: 79.44};
+                                break;
+                            case 2:
+                                uluru = {lat: 11.43, lng: 73.49};
+                                break;
+                            case 3:
+                                uluru = {lat: 9.10, lng: 79.28};
+                                break;
+                            default:
+                                alert("Error");
+                        }
+                        break;
+                    case 5:
+                        switch (itemCode)
+                        {
+                            case 1:
+                                uluru = {lat: 27.175216, lng: 78.042102};
+                                break;
+                            case 2:
+                                uluru = {lat: 13.05, lng: 79.43};
+                                break;
+                            case 3:
+                                uluru = {lat: 11.00, lng: 77.00};
+                                break;
+                            default:
+                                alert("Error");
+                        }
+                        break;
+                    default:
+                        alert("Error");
+                }
+                initMap();
+            }
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 12,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                    animation: google.maps.Animation.BOUNCE
+                });
             }
         </script>
         <!--
@@ -117,65 +199,50 @@
                     <div class="form-group" id="form">
                         <h4>List of places:</h4>
                         <div id="list">
-                            <div id="museum" onchange="radioselected()">
-                                <input type=radio id="mus1" name="museum">Museum 1
+                            <div id="museum">
+                                <input type=radio id="mus1" name="museum" onclick="radioselected(1, 1)">Museum 1
                                 <br>
-                                <input type=radio id="mus2" name="museum">Museum 2
+                                <input type=radio id="mus2" name="museum" onclick="radioselected(1, 2)">Museum 2
                                 <br>
-                                <input type=radio id="mus3" name="museum">Museum 3
+                                <input type=radio id="mus3" name="museum" onclick="radioselected(1, 3)">Museum 3
                             </div>
                             <div id="theatre">
-                                <input type=radio id="th1" name="theatre">Theatre 1
+                                <input type=radio id="th1" name="theatre" onclick="radioselected(2, 1)">Theatre 1
                                 <br>
-                                <input type=radio id="th2" name="theatre">Theatre 2
+                                <input type=radio id="th2" name="theatre" onclick="radioselected(2, 2)">Theatre 2
                                 <br>
-                                <input type=radio id="th3" name="theatre">Theatre 3
+                                <input type=radio id="th3" name="theatre" onclick="radioselected(2, 3)">Theatre 3
                             </div>
                             <div id="mall">
-                                <input type=radio id="ml1" name="mall">Mall 1
+                                <input type=radio id="ml1" name="mall" onclick="radioselected(3, 1)">Mall 1
                                 <br>
-                                <input type=radio id="ml2" name="mall">Mall 2
+                                <input type=radio id="ml2" name="mall" onclick="radioselected(3, 2)">Mall 2
                                 <br>
-                                <input type=radio id="ml3" name="mall">Mall 3
+                                <input type=radio id="ml3" name="mall" onclick="radioselected(3, 3)">Mall 3
                             </div>
                             <div id="beach">
-                                <input type=radio id="be1" name="beach">Beach 1
+                                <input type=radio id="be1" name="beach" onclick="radioselected(4, 1)">Beach 1
                                 <br>
-                                <input type=radio id="be2" name="beach">Beach 2
+                                <input type=radio id="be2" name="beach" onclick="radioselected(4, 2)">Beach 2
                                 <br>
-                                <input type=radio id="be3" name="beach">Beach 3
+                                <input type=radio id="be3" name="beach" onclick="radioselected(4, 3)">Beach 3
                             </div>
                             <div id="temple">
-                                <input type=radio id="tmp1" name="temple">Temple 1
+                                <input type=radio id="tmp1" name="temple" onclick="radioselected(5, 1)">Temple 1
                                 <br>
-                                <input type=radio id="tmp2" name="temple">Temple 2
+                                <input type=radio id="tmp2" name="temple" onclick="radioselected(5, 2)">Temple 2
                                 <br>
-                                <input type=radio id="tmp3" name="temple">Temple 3
+                                <input type=radio id="tmp3" name="temple" onclick="radioselected(5, 3)">Temple 3
                             </div>
                         </div>
                     </div>
                     <br>
                     <br>
-                    <button type="submit" class="btn btn-primary" onclick="retrieveinfo()">Submit</button>
                 </form>
             </article>
             <nav>
                 <div id="map"></div>
-                <script>
 
-                    function initMap() {
-                        var uluru = {lat: 10.729327, lng: 79.019563};
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 18,
-                            center: uluru
-                        });
-                        var marker = new google.maps.Marker({
-                            position: uluru,
-                            map: map,
-                            animation: google.maps.Animation.BOUNCE
-                        });
-                    }
-                </script>
                 <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASEWeplcnZ4LAVpKHeVuOmw2li6unKAso&callback=initMap">
                 </script>
