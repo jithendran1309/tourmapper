@@ -1,6 +1,6 @@
 div.container {
     width: 100%;
-    border: 1px solid gray;
+    border: thick white solid;
 }
 
 header {
@@ -67,8 +67,12 @@ article {
     border-left: 1px solid gray;
     padding: 1em;
     margin-bottom: 0px;
+    background-color: #67d136;
     overflow: hidden;
-}#pic {
+    border: thick white solid;
+}
+#pic {
 width: 150px;
 height: 200px;
+margin-bottom: 10px;
 }

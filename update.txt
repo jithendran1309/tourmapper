@@ -1,0 +1,54 @@
+if (a==("museum1"))
+                {
+                    alert(a);
+                    uluru = {lat: 27.175216, lng: 78.042102};
+                } else if (b.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (c.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (d===("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (e.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (f.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (g.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (h.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (i.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (j.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (k.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (l.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (m.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (m.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } else if (n.equals("on"))
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                } 
+                else
+                {
+                    uluru = {lat: 10.729327, lng: 79.019563};
+                }
+                initMap();
+                a=b=c=d=e=f=g=h=i=j=k=l=m=n=0;
+            
